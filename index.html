@@ -3,48 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horari Setmanal</title>
+    <title>Horari</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-        }
-        .container {
-            margin: 20px auto;
-            max-width: 800px;
-        }
-        h1 {
-            text-align: center;
+            background: linear-gradient(135deg, #a2c2fa, #f9d6e2);
             color: #333;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background: white;
-        }
-        th, td {
-            border: 1px solid #ddd;
+
+        header {
+            background: #002366;
+            color: #fff;
             text-align: center;
-            padding: 10px;
+            padding: 1rem 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
         }
-        th {
-            background-color: #4CAF50;
-            color: white;
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
         }
-        td {
-            background-color: #f9f9f9;
+
+        main {
+            margin: 2rem;
+            display: flex;
+            justify-content: center;
         }
-        td:nth-child(odd) {
-            background-color: #eaf5ea;
+
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        thead {
+            background: #002366;
+            color: #fff;
+        }
+
+        thead th {
+            padding: 1rem;
+            font-size: 1.2rem;
+        }
+
+        tbody td, thead th {
+            text-align: center;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .pati {
+            background: #ffe0b3;
+            font-weight: bold;
+            color: #d35400;
+        }
+
+        tbody td:first-child {
+            font-weight: bold;
+            background: #f1f1f1;
+        }
+
+        tbody tr:hover {
+            background: #f3f8ff;
+            cursor: pointer;
+        }
+
+        /* Colors per assignatures */
+        .PAX { background-color: #ffcccc; }
+        .Angles { background-color: #cce5ff; }
+        .Marques { background-color: #d5ccff; }
+        .ISO { background-color: #ccffd8; }
+        .Sistemes { background-color: #fff0b3; }
+        .Sostenibilitat { background-color: #ffe6cc; }
+        .Bases { background-color: #e0ccff; }
+        .Tutoria { background-color: #d9f7be; }
+
+        @media (max-width: 768px) {
+            table {
+                width: 100%;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <header>
         <h1>Horari Setmanal</h1>
+    </header>
+    <main>
         <table>
             <thead>
                 <tr>
@@ -59,54 +116,54 @@
             <tbody>
                 <tr>
                     <td>8:15</td>
-                    <td></td>
-                    <td>Angles</td>
-                    <td>Angles</td>
-                    <td></td>
-                    <td>Marques</td>
+                    <td class="PAX">PAX</td>
+                    <td class="Angles">Angles</td>
+                    <td class="Angles">Angles</td>
+                    <td class="Marques">Marques</td>
+                    <td class="ISO">ISO</td>
                 </tr>
                 <tr>
                     <td>9:15</td>
-                    <td>Sistemes</td>
-                    <td>Sistemes</td>
-                    <td>Sostenibilitat</td>
-                    <td>Sistemes</td>
-                    <td></td>
+                    <td class="Sistemes">Sistemes</td>
+                    <td class="Sistemes">Sistemes</td>
+                    <td class="Sostenibilitat">Sostenibilitat</td>
+                    <td class="Sistemes">Sistemes</td>
+                    <td class="ISO">ISO</td>
                 </tr>
                 <tr>
                     <td>10:15</td>
-                    <td colspan="5">PATI</td>
+                    <td colspan="5" class="pati">PATI</td>
                 </tr>
                 <tr>
                     <td>10:40</td>
-                    <td></td>
-                    <td></td>
-                    <td rowspan="2">Bases de Dades</td>
-                    <td rowspan="2">Bases de Dades</td>
-                    <td></td>
+                    <td class="PAX">PAX</td>
+                    <td class="ISO">ISO</td>
+                    <td class="Bases">Bases de Dades</td>
+                    <td class="Bases">Bases de Dades</td>
+                    <td class="ISO">ISO</td>
                 </tr>
                 <tr>
                     <td>11:40</td>
+                    <td class="PAX">PAX</td>
+                    <td class="ISO">ISO</td>
                     <td></td>
                     <td></td>
-
-                
-                    <td>Tutoria</td>
+                    <td class="Tutoria">Tutoria</td>
                 </tr>
                 <tr>
                     <td>12:40</td>
-                    <td colspan="5">PATI</td>
+                    <td colspan="5" class="pati">PATI</td>
                 </tr>
                 <tr>
                     <td>13:00</td>
                     <td></td>
                     <td></td>
-                    <td>Marques</td>
+                    <td class="Marques">Marques</td>
                     <td></td>
                     <td></td>
                 </tr>
             </tbody>
         </table>
-    </div>
+    </main>
 </body>
 </html>
